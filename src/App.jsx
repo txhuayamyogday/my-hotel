@@ -1,18 +1,17 @@
-import React, { Component, useEffect } from "react";
-import NavBar from "./components/NavBar/NavBar";
+import React, { Component, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import NavBar from "./components/NavBar/NavBar";
+
+
 
 const App = () =>{
-  const navigate = useNavigate()
-  useEffect(() => {
-    navigate('/home')
-  }, [navigate])
-
   return (
     <div>
-      <nav>
-        <NavBar/>
-      </nav>
+      <header>
+        <nav>
+          <NavBar number_page={1}/>
+        </nav>
+      </header>
     </div>
   )
 }

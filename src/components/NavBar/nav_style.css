@@ -1,0 +1,41 @@
+
+.nav_container{
+    display: flex;
+    background-color: none;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    transition: background-color 0.5s ease-in-out;
+    z-index: 100;
+}
+.nav_container_scroll{
+    background-color: #f4f4f4;
+}
+.nav_right ul{
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    gap: 100px;
+}
+.nav_right ul li button{
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    cursor: pointer;
+    color: aqua;
+    transition: .2s ease-in-out;
+}
+.nav_right ul li button:hover{
+    color: rgb(255, 0, 0);
+}
+
+.font_color{
+    color: rgb(255, 0, 0) !important;
+}
+.nav_logo{
+    background-color: none;
+    border: none;
+    cursor: pointer;
+}

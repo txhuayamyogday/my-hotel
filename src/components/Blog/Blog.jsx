@@ -1,10 +1,9 @@
 import NavBar from "../NavBar/NavBar"
-
 const Blog =() => {
     return(
         <div>
             <nav>
-                <NavBar/>
+            <NavBar number_page={4}/>
             </nav>
             <h1>Hello Blog</h1>
         </div>

@@ -1,39 +1,43 @@
 import { useNavigate } from "react-router-dom"
-import style from "./NavBar.module.css"
+import './nav_style.css'
 import { useEffect, useState } from "react"
-
-const NavBar = () => {
+const NavBar = ({number_page}) => {
     const navigate = useNavigate()
-    const [page, setPage] = useState('home')
-    const [newPage, setNewPage] = useState('home')
     const pages = ['home', 'about', 'rooms', 'blog', 'contact']
     const li_nav = ['HOME', "ABOUT", "ROOMS", "BLOG", "CONTACT"]
-
-    const tellPage = (e) =>{
-        setPage(pages[e])
-        setNewPage(page)
-        console.log(newPage)
-        navigate(`/${newPage}`)
+    const [scrollY, setScrollY] = useState(0)
+    const handlePage = (e) => {
+        navigate(`/${pages[e]}`)
+    }
+    const handleScroll = () => {
+        setScrollY(window.scrollY)
     }
 
-
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+          window.removeEventListener('scroll', handleScroll); // Clean up listener on unmount
+        };
+      }, []);
+    
     return(
-        <div className={style.nav_container}>
-            <div className="nav-right">
-                <button onClick={() => {navigate('/home')}} className={style.nav_logo}>
+        <div className={`nav_container ${scrollY > 0 ? 'nav_container_scroll' : console.log(window.scrollY)}`}>
+            <div className="nav-left">
+                <button onClick={() => {navigate('/home')}} className="nav_logo">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAHXPluq6GtTRPDIHRv5kJPy86uFjp5sO7hg&s" alt="img" width={100} height={100} />
                 </button>
             </div>
-            <div className={style.nav_left}>
+            <div className="nav_right">
                 <ul>
                     {li_nav.map((e, index) => (
-                        <li><button onClick={() => {tellPage(index)}}>{e}</button></li>
+                        <li><button onClick={() => {
+                          handlePage(index)
+                        }} className={`${number_page == index+1 ? "font_color" : ""}`}>{e}</button></li>
                     ))}
                 </ul>
             </div>
         </div>
     )
 }
-
 
 export default NavBar
