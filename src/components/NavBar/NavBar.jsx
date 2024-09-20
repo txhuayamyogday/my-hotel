@@ -4,7 +4,7 @@ import { useEffect, useState } from "react"
 const NavBar = ({number_page}) => {
     const navigate = useNavigate()
     const pages = ['home', 'about', 'rooms', 'blog', 'contact']
-    const li_nav = ['HOME', "ABOUT", "ROOMS", "BLOG", "CONTACT"]
+    const li_nav = ['HOME', "ABOUT", "ROOMS", "BLOG", "BOOK"]
     const [scrollY, setScrollY] = useState(0)
     const handlePage = (e) => {
         navigate(`/${pages[e]}`)
@@ -24,7 +24,7 @@ const NavBar = ({number_page}) => {
         <div className={`nav_container ${scrollY > 0 ? 'nav_container_scroll' : console.log(window.scrollY)}`}>
             <div className="nav-left">
                 <button onClick={() => {navigate('/home')}} className="nav_logo">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAHXPluq6GtTRPDIHRv5kJPy86uFjp5sO7hg&s" alt="img" width={100} height={100} />
+                    LA
                 </button>
             </div>
             <div className="nav_right">

@@ -8,11 +8,12 @@
     justify-content: space-around;
     align-items: center;
     transition: background-color 0.5s ease-in-out;
-    z-index: 100;
+    z-index: 1000;
 }
 .nav_container_scroll{
-    background-color: #f4f4f4;
+    background-color: #3d3d3dab;
 }
+
 .nav_right ul{
     flex-wrap: wrap;
     display: flex;
@@ -24,15 +25,16 @@
     background-color: rgba(0, 0, 0, 0);
     border: none;
     cursor: pointer;
-    color: aqua;
+    color: rgb(0, 0, 0);
     transition: .2s ease-in-out;
 }
 .nav_right ul li button:hover{
-    color: rgb(255, 0, 0);
+    color: white;
 }
 
 .font_color{
-    color: rgb(255, 0, 0) !important;
+    color: white!important;
+    font-weight: 900;
 }
 .nav_logo{
     background-color: none;
