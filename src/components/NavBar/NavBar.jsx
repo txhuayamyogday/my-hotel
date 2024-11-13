@@ -24,7 +24,7 @@ const NavBar = ({number_page}) => {
         <div className={`nav_container ${scrollY > 0 ? 'nav_container_scroll' : console.log(window.scrollY)}`}>
             <div className="nav-left">
                 <button onClick={() => {navigate('/home')}} className="nav_logo">
-                    LA
+                    Sirisak Hotel
                 </button>
             </div>
             <div className="nav_right">

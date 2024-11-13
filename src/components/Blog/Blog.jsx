@@ -143,8 +143,9 @@ const Section_5 = () => {
     <div>
       <div id={style.section5_container}>
        <h1>Have a Question?</h1> 
-        <p>What's app: 20-xx-xxx-xxx</p>
-        <p>Facebook: Bill Gate, Enof, Kaja, Yok</p>
+        <p>What's app: +856 2076643446</p>
+        <p>Facebook: Kaja YANG</p>
+        <p>Facebook: Phone VANG</p>
       </div>
     </div>
   )

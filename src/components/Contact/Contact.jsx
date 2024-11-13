@@ -81,14 +81,13 @@ const ContactForm = () => {
 
         <div className="contact-info">
           <p>
-            <strong>ADDRESS:</strong> 198 West 21th Street, Suite 721 New York
-            NY 10016
+            <strong>ADDRESS:</strong> 198 West 21th Street, Suite 721 VangVieng
           </p>
           <p>
-            <strong>EMAIL:</strong> info@yoursite.com
+            <strong>EMAIL:</strong> phonevang123@.com
           </p>
           <p>
-            <strong>PHONE:</strong> + 1235 2355 98
+            <strong>PHONE:</strong> +856 2076643446
           </p>
         </div>
 
@@ -148,7 +147,6 @@ const ContactForm = () => {
       <div className="error-section">
         <div className="error-content">
           <div className="div">
-            a
             <ul>
               {posts.map((post, index) => (
                 <li key={post._id}>
