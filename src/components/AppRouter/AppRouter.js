@@ -4,6 +4,7 @@ import About from "../About/About"
 import Rooms from "../Rooms/Rooms"
 import Blog from "../Blog/Blog"
 import Contact from "../Contact/Contact"
+import Resume from "../Resume/Resume"
 
 const AppRouter = () => {
     return(
@@ -14,6 +15,7 @@ const AppRouter = () => {
                 <Route path="/about" element={<About/>}></Route>
                 <Route path="/rooms" element={<Rooms/>}></Route>
                 <Route path="/blog" element={<Blog/>}></Route>
+                 <Route path="/resume" element={<Resume />} />
                 <Route path="/contact" element={<Contact/>}></Route>
             </Routes>
         </Router>

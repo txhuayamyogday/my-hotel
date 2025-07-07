@@ -5,6 +5,8 @@ import {Section_2, Section_5 } from "./components/About/About";
 import { RoomMain } from "./components/Rooms/Rooms";
 import { Blog_comp } from "./components/Blog/Blog";
 import style from "./components/About/About.module.css"
+import Resume from "./components/Resume/Resume";
+
 
 export const  Section_1 = () => {
   return (
@@ -43,6 +45,7 @@ const App = () =>{
         <RoomMain/>
         <Blog_comp/>
         <Section_5/>
+        <Resume/>
       </main>
     </div>
   )
